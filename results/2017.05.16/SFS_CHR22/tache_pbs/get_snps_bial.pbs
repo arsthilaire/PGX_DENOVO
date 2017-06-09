@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l walltime=10:0:0
+
+cd /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/DATA/1000G/
+export MUGQIC_INSTALL_HOME=/cvmfs/soft.mugqic/CentOS6
+module load mugqic/vcftools/0.1.14
+cd ~/hussinju_group/lab_projects/PGX_DENOVO/DATA/1000G/
+ 
+vcftools --gzvcf ALL.chr22.phase3_shapeit2_mvncall_integrated_v5a.20130502.genotypes.vcf.gz --remove-indels --min-alleles 2 --max-alleles 2 --recode --recode-INFO-all --out  ~/hussinju_group/lab_projects/PGX_DENOVO/results/2017.05.16/SFS_CHR22/chr22_snps_bial
+

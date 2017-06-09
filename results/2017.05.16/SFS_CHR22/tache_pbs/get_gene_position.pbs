@@ -1,0 +1,5 @@
+#!/bin/bash
+#PBS -l walltime=4:0:0
+cd /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/results/2017.05.16/SFS_CHR22/
+
+awk -F '\t' '{ if ($1 == "22" && $96 != "NA") print $1,"\t",$2 }' /RQusagers/arsth/hussinju_group/DATA/1000GP_Phase3_annot/1000G_phase3_inclAnno.tsv > gene_position.txt
