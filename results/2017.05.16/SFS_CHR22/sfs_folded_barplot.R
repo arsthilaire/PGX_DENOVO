@@ -31,7 +31,7 @@ for(x in 1:(length(hist$breaks)-1)){
 colnames(result)<- colnames
 
 
-x<-barplot(result,beside=TRUE, col= color, ylab="Frequency",legend = rownames(result), xlab= "Frequency class", main= "Folded Site Frequency Spectrum for each superpopulation\nof the 1000G data for the chr 22")
+x<-barplot(result,beside=TRUE, col= color, xaxt="n",ylab="Frequency",legend = rownames(result), xlab= "Frequency class", main= "Folded Site Frequency Spectrum for each superpopulation\nof the 1000G data for the chr 22")
 
 text(cex=0.5,1:length(colnames), y= -1.25, labels = colnames, xpd=TRUE, srt=45, adj=1.2)
 dev.off()
