@@ -1,0 +1,9 @@
+#!/bin/bash
+#PBS -l walltime=10:0:0
+
+module load mugqic/vcftools/0.1.14
+cd ~/hussinju_group/lab_projects/PGX_DENOVO/DATA/1000G/
+ 
+vcftools --gzvcf CYP_chr_concat.vcf.gz --bed ~/hussinju_group/lab_projects/PGX_DENOVO/CYPGENES/CYPgenes_coordinates_GRCh37.BED --remove-indels --min-alleles 2 --max-alleles 2 --recode --recode-INFO-all --out ~/hussinju_group/lab_projects/PGX_DENOVO/results/2017.05.16/SNPS_BIAL/CYP_snps_bial
+
+

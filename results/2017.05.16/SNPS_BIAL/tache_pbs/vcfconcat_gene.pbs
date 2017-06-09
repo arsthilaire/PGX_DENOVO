@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l walltime=1:0:0
+cd /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/results/2017.05.16/SNPS_BIAL
+export MUGQIC_INSTALL_HOME=/cvmfs/soft.mugqic/CentOS6
+module use /cvmfs/soft.mugqic/CentOS6/modulefiles
+module load mugqic/vcftools/0.1.14
+
+vcf-concat CYP11A1_snps_bial.recode.vcf CYP11B1_snps_bial.recode.vcf CYP11B2_snps_bial.recode.vcf CYP17A1_snps_bial.recode.vcf CYP19A1_snps_bial.recode.vcf CYP1A1_snps_bial.recode.vcf CYP1A2_snps_bial.recode.vcf CYP1B1_snps_bial.recode.vcf CYP20A1_snps_bial.recode.vcf CYP21A1P_snps_bial.recode.vcf CYP21A2_snps_bial.recode.vcf CYP24A1_snps_bial.recode.vcf CYP26A1_snps_bial.recode.vcf CYP26C1_snps_bial.recode.vcf CYP27A1_snps_bial.recode.vcf CYP27B1_snps_bial.recode.vcf CYP2A13_snps_bial.recode.vcf CYP2A6_snps_bial.recode.vcf CYP2A7_snps_bial.recode.vcf CYP2B6_snps_bial.recode.vcf CYP2B7P1_snps_bial.recode.vcf CYP2C18_snps_bial.recode.vcf CYP2C19_snps_bial.recode.vcf CYP2C8_snps_bial.recode.vcf CYP2C9_snps_bial.recode.vcf CYP2D6_snps_bial.recode.vcf CYP2E1_snps_bial.recode.vcf CYP2F1_snps_bial.recode.vcf CYP2J2_snps_bial.recode.vcf CYP2S1_snps_bial.recode.vcf CYP39A1_snps_bial.recode.vcf CYP3A43_snps_bial.recode.vcf CYP3A4_snps_bial.recode.vcf CYP3A5_snps_bial.recode.vcf CYP3A7-CYP3AP1_snps_bial.recode.vcf CYP3A7_snps_bial.recode.vcf CYP46A1_snps_bial.recode.vcf CYP4A11_snps_bial.recode.vcf CYP4B1_snps_bial.recode.vcf CYP4F11_snps_bial.recode.vcf CYP4F12_snps_bial.recode.vcf CYP4F2_snps_bial.recode.vcf CYP4F3_snps_bial.recode.vcf CYP4F8_snps_bial.recode.vcf CYP4Z1_snps_bial.recode.vcf CYP51A1_snps_bial.recode.vcf CYP7A1_snps_bial.recode.vcf CYP7B1_snps_bial.recode.vcf CYP8B1_snps_bial.recode.vcf  | gzip -c > gene_concat_snps_bial.vcf.gz 
+
+
