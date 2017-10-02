@@ -1,0 +1,8 @@
+#!/bin/bash
+#PBS -l walltime=0:10:0
+#PBS -j oe
+cd /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/results/2017.08.07/TAJIMASD_CYPGENES
+export MUGQIC_INSTALL_HOME=/cvmfs/soft.mugqic/CentOS6
+module use /cvmfs/soft.mugqic/CentOS6/modulefiles
+module load mugqic/vcftools/0.1.14
+vcftools --vcf /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/results/2017.05.30/SFS_SAMESIZE/cyp_snps.recode.vcf --keep /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/DATA/1000G/EAS_indID_347 --TajimaD 1000 --out EAS_347_1000
