@@ -1,0 +1,8 @@
+#!/bin/bash
+#PBS -l walltime=1:0:0
+#PBS -j oe
+cd /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/results/2017.08.07/TAJIMASD/CHR22
+export MUGQIC_INSTALL_HOME=/cvmfs/soft.mugqic/CentOS6
+module use /cvmfs/soft.mugqic/CentOS6/modulefiles
+module load mugqic/vcftools/0.1.14
+vcftools --vcf /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/results/2017.05.16/SFS_CHR22/chr22_snps_bial.recode.vcf --positions /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/results/2017.05.16/SFS_CHR22/gene_position_uniq.txt --keep /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/DATA/1000G/SAS_indID_347 --TajimaD 1000 --out SAS_347_1000
