@@ -1,0 +1,1 @@
+for file in $(ls rawdata/fastq/* | grep -v split); do echo $file; gzip $file; done
