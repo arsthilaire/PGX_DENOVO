@@ -1,0 +1,22 @@
+
+VCFtools - 0.1.14
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--gzvcf /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/DATA/1000G/CYP_chr_concat.vcf.gz
+	--keep /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/DATA/1000G/AMR_indID
+	--max-alleles 2
+	--min-alleles 2
+	--freq2
+	--out AMR
+	--remove-indels
+	--bed /RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/CYPGENES/CYPgenes_coordinates_GRCh37_58.BED
+
+Using zlib version: 1.2.3
+Versions of zlib >= 1.2.4 will be *much* faster when reading zipped VCF files.
+Keeping individuals in 'keep' list
+After filtering, kept 347 out of 2504 Individuals
+Outputting Frequency Statistics...
+	Read 59 BED file entries.
+After filtering, kept 62390 out of a possible 61187419 Sites
+Run Time = 3637.00 seconds

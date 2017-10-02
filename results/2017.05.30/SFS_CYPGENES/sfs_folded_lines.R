@@ -1,5 +1,5 @@
 population <- read.table(file='/RQusagers/arsth/hussinju_group/lab_projects/PGX_DENOVO/DATA/1000G/superpop.list', header= FALSE)
-pdf('sfs_folded_snps_lines3.pdf')
+pdf('sfs_folded.pdf')
 color= c('black','red','green','cyan','orange')
 
 for(p in 1:5){
@@ -11,12 +11,12 @@ for(p in 1:5){
 
 	MIF <- data[,6]
 	MIF <- subset(MIF, MIF >0) #remove 0
-	hist<- hist(MIF, plot =FALSE, breaks= seq(0,0.5,by=0.01))	
+	hist<- hist(MIF, plot =FALSE, breaks= c(0,0.01,0.025,0.05,0.1,0.25,0.3,0.4,0.5))	
 
+	Total= sum(hist$counts)		
+	if(p==1){ plot(hist$counts/Total, type='l',cex=0.7, col= color[p], ylab="Frequency", xlab= "Frequency class",xaxt="n" , main= "Site Frequency Spectrum for each superpopulation\nof the 1000G data for the selected CYPgenes" ) }
 		
-	if(p==1){ plot(hist$density, type='l',cex=0.7, col= color[p], ylab="Frequency", xlab= "Frequency class",xaxt="n" , main= "Site Frequency Spectrum for each superpopulation\nof the 1000G data for the selected CYPgenes" ) }
-		
-	else if(p>1){lines( hist$density, type='l', cex=0.7, col= color[p],xaxt="n")}
+	else if(p>1){lines( hist$counts/Total, type='l', cex=0.7, col= color[p],xaxt="n")}
 
 }
 
